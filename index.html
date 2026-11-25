@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio & Web Development Services featuring an interactive dynamic hero slider." />
+  <title>DevStudio | Dynamic Portfolio & Hero Slider</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Sticky Accessible Navigation -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="#" class="brand-logo" aria-label="DevStudio Home">
+        <span class="logo-dot"></span>DevStudio
+      </a>
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-links">
+          <li><a href="#hero-slider" class="active">Home</a></li>
+          <li><a href="#featured-work">Projects</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact" class="nav-cta">Hire Me</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Full-Width Dynamic Hero Slider -->
+    <section
+      id="hero-slider"
+      class="hero-slider"
+      aria-roledescription="carousel"
+      aria-label="Featured Projects and Services"
+      tabindex="0"
+    >
+      <!-- Slides are injected dynamically via script.js -->
+      <div class="slides-track" id="slidesTrack" aria-live="polite"></div>
+
+      <!-- Previous / Next Controls -->
+      <button
+        class="slider-arrow prev"
+        id="prevBtn"
+        type="button"
+        aria-label="Previous slide"
+      >
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+      </button>
+
+      <button
+        class="slider-arrow next"
+        id="nextBtn"
+        type="button"
+        aria-label="Next slide"
+      >
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </button>
+
+      <!-- Bottom Indicators & Progress Bar -->
+      <div class="slider-controls-bottom">
+        <div class="slider-dots" id="sliderDots" role="tablist" aria-label="Choose a slide"></div>
+      </div>
+      <div class="slider-progress" id="sliderProgress"></div>
+    </section>
+
+    <!-- Supporting Preview Section (Makes the Home Page Feel Complete) -->
+    <section id="featured-work" class="highlights-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Core Capabilities</span>
+          <h2>Engineered for Speed, Clarity & Conversion</h2>
+          <p>Clean semantic architecture paired with responsive interfaces across mobile, tablet, and desktop.</p>
+        </div>
+
+        <div class="cards-grid" id="services">
+          <article class="feature-card">
+            <div class="card-icon">01</div>
+            <h3>Frontend Architecture</h3>
+            <p>Accessible HTML5, modern CSS Grid/Flexbox layouts, and modular vanilla JavaScript.</p>
+          </article>
+          <article class="feature-card">
+            <div class="card-icon">02</div>
+            <h3>UI/UX Prototyping</h3>
+            <p>User-centered wireframes, consistent design tokens, and smooth micro-interactions.</p>
+          </article>
+          <article class="feature-card">
+            <div class="card-icon">03</div>
+            <h3>Performance & SEO</h3>
+            <p>Optimized asset loading, semantic headings, keyboard navigation, and fast Core Web Vitals.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact" class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 DevStudio — Batch 13 Web Development Internship Project.</p>
+      <a href="#hero-slider" class="back-top">Back to Top &uarr;</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
